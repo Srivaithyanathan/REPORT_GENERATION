@@ -773,13 +773,9 @@ with col_eng_left:
         st.markdown(f"<div style='font-size:11px; font-family:JetBrains Mono; background:#F9FAFB; padding:6px 10px; border:1px solid #E5E7EB; border-radius:6px; margin-top:6px;'>OPTICAL VED: <strong>{derived_ved:.1f} J/mm³</strong></div>", unsafe_allow_html=True)
         if st.button("SYNC VED WITH OPTICS", use_container_width=True):
             st.session_state["input_ved"] = derived_ved
-            st.session_state["slider_ved_key"] = derived_ved
             st.session_state["input_power"] = opt_power
-            st.session_state["opt_power_key"] = opt_power
             st.session_state["input_layer"] = opt_layer
-            st.session_state["opt_layer_key"] = opt_layer
             st.session_state["input_hatch"] = opt_hatch
-            st.session_state["opt_hatch_key"] = opt_hatch
             st.rerun()
 
     render_html("</div>")
