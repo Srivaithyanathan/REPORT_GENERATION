@@ -12,7 +12,7 @@ def generate_markdown_report(result: AnalysisResult, batch_id: str = "AL-2026-09
     """Generates standard engineering Markdown audit document."""
     alloy = result.alloy_info
     lines = []
-    lines.append(f"# AluSense AI™ — Industrial Manufacturing Qualification Report")
+    lines.append(f"# DST SREC INCUBATION CENTER — Industrial Manufacturing Qualification Report")
     lines.append(f"**Verification Standard:** ISO/ASTM 52900 / {alloy['standard']}  ")
     lines.append(f"**Generated:** {result.timestamp} | **Batch ID:** `{batch_id}` | **Operator:** `{operator_id}`  ")
     lines.append(f"**Compliance Verdict:** **{result.compliance_status}**  ")
@@ -59,7 +59,7 @@ def generate_markdown_report(result: AnalysisResult, batch_id: str = "AL-2026-09
     lines.append("---")
     lines.append("### Quality Assurance Certification Sign-Off")
     lines.append("```")
-    lines.append("CERTIFIED BY: AluSense AI Automated Metallurgy Kernel v2.4")
+    lines.append("CERTIFIED BY: DST SREC INCUBATION CENTER Metallurgy Kernel v2.4")
     lines.append(f"SIGNATURE HASH: SHA256:{hash(result.timestamp + batch_id) & 0xFFFFFFFFFFFF:012X}")
     lines.append(f"AUDIT STAMP: [ {result.compliance_status} ]")
     lines.append("```")
@@ -150,7 +150,7 @@ def generate_html_report(result: AnalysisResult, batch_id: str = "AL-2026-09A", 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AluSense AI — Inspection Report {batch_id}</title>
+    <title>DST SREC INCUBATION CENTER — Inspection Report {batch_id}</title>
     <style>
         @media print {{
             body {{ background: #FFFFFF !important; color: #000000 !important; }}
@@ -301,7 +301,7 @@ def generate_html_report(result: AnalysisResult, batch_id: str = "AL-2026-09A", 
     <div class="container">
         <div class="header">
             <div>
-                <h1 class="title">AluSense AI™</h1>
+                <h1 class="title">DST SREC INCUBATION CENTER</h1>
                 <div class="subtitle">Industrial Metallurgy & Process Qualification Audit</div>
             </div>
             <div class="badge-verdict">
@@ -454,7 +454,7 @@ def generate_html_report(result: AnalysisResult, batch_id: str = "AL-2026-09A", 
             </div>
             <div style="text-align:right;">
                 <div>TIMESTAMP: {result.timestamp}</div>
-                <div>SYSTEM: AluSense AI v2.4 Industrial Edition</div>
+                <div>SYSTEM: DST SREC INCUBATION CENTER v2.4 Industrial Edition</div>
             </div>
         </div>
     </div>

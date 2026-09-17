@@ -33,7 +33,7 @@ from utils.report_generator import generate_markdown_report, generate_html_repor
 # PAGE CONFIGURATION
 # ==========================================
 st.set_page_config(
-    page_title="AluSense AI™ | Aluminium Manufacturing Intelligence",
+    page_title="DST SREC INCUBATION CENTER | Aluminium Manufacturing Intelligence",
     page_icon="⚙️",
     layout="wide",
     initial_sidebar_state="collapsed"
@@ -95,8 +95,9 @@ html, body, [data-testid="stAppViewContainer"], .stApp {
     gap: 14px;
 }
 .brand-mark {
-    width: 38px;
+    min-width: 44px;
     height: 38px;
+    padding: 0 6px;
     background: #111111;
     color: #FFFFFF;
     border-radius: 8px;
@@ -104,7 +105,8 @@ html, body, [data-testid="stAppViewContainer"], .stApp {
     align-items: center;
     justify-content: center;
     font-weight: 800;
-    font-size: 16px;
+    font-size: 13px;
+    letter-spacing: 0.03em;
     font-family: 'JetBrains Mono', monospace;
 }
 .product-title {
@@ -487,9 +489,9 @@ if cur_element != "None":
 
 header_html = f"""<div class="product-header">
 <div class="product-title-group">
-<div class="brand-mark">Al</div>
+<div class="brand-mark">DST</div>
 <div>
-<h1 class="product-title">AluSense AI™</h1>
+<h1 class="product-title">DST SREC INCUBATION CENTER</h1>
 <div class="product-subtitle">Aluminium Manufacturing Intelligence Platform</div>
 </div>
 </div>
@@ -1436,7 +1438,7 @@ with st.expander("Quality Assurance Certificate Export & Inspection Audit"):
         st.download_button(
             label="⬇ DOWNLOAD AUDIT (MARKDOWN)",
             data=md_report,
-            file_name=f"AluSense_Report_{cur_alloy}.md",
+            file_name=f"DST_SREC_Report_{cur_alloy}.md",
             mime="text/markdown",
             use_container_width=True
         )
@@ -1444,7 +1446,7 @@ with st.expander("Quality Assurance Certificate Export & Inspection Audit"):
         st.download_button(
             label="⬇ DOWNLOAD QA CERTIFICATE (HTML)",
             data=html_report,
-            file_name=f"AluSense_QA_Certificate_{cur_alloy}.html",
+            file_name=f"DST_SREC_QA_Certificate_{cur_alloy}.html",
             mime="text/html",
             use_container_width=True
         )
